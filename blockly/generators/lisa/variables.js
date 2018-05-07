@@ -90,3 +90,43 @@ Blockly.lisa['object-pointer'] = function(block) {
   var code = class_name+' '+'*'+text_pointer_name+';\n';
   return code;
 };
+
+/**
+ * variable holder code generation stub
+ */
+Blockly.lisa['var-holder'] = function(block) {
+  var className = block.getFieldValue('className');
+  var varName = block.getFieldValue('varName');
+  var body = Blockly.lisa.statementToCode(block, 'NAME');
+
+  // TODO: Assemble JavaScript into code variable.
+
+  var varNames = body.split('$$');
+
+  var code = '';
+  code += className;
+  code += ' ' + varName + '[] = {';
+
+  for(var i = 0; i < varNames.length - 1; i++) {
+    if(i === varNames.length -2) {
+      code += varNames[i];
+      break;
+    }
+
+    code += varNames[i] + ', ';
+  }
+
+  code += '}; \n';
+
+  return code;
+};
+
+Blockly.lisa['var-name'] = function(block) {
+  var varName = block.getFieldValue('varName');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '';
+  code += varName;
+  code += '$$';
+
+  return code;
+};

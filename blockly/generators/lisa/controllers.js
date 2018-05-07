@@ -34,6 +34,6 @@ Blockly.lisa['wait'] = function(block) {
 };
 
 Blockly.lisa['statement-exec'] = function(block) {
-  var text_statement = block.getFieldValue('statement');
+  var code = block.getFieldValue('statement');
   return code;
 };

@@ -27,7 +27,6 @@ Blockly.Blocks["ctrl-infinite-loop"] = {
  */
 Blockly.Blocks["ctrl-for-loop"] = {
   init: function() {
-    this.setHelpUrl("http://www.example.com/");
     this.appendDummyInput()
       .appendField("count with index from ")
       .appendField(new Blockly.FieldTextInput("0"), "startValue")
@@ -40,6 +39,7 @@ Blockly.Blocks["ctrl-for-loop"] = {
     this.setPreviousStatement(true, "Boolean");
     this.setNextStatement(true);
     this.setTooltip("");
+    this.setColour(100);
   }
 };
 
@@ -47,20 +47,23 @@ Blockly.Blocks["wait"] = {
   init: function() {
     this.appendDummyInput()
       .appendField("wait for ")
-      .appendField(new Blockly.FieldTextInput("2"), "waitTime")
+      .appendField(new Blockly.FieldTextInput("0.2"), "waitTime")
       .appendField(" seconds");
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip("");
+    this.setColour(120);
   }
 };
 
 Blockly.Blocks['statement-exec'] = {
   init: function() {
-    this.setHelpUrl('http://www.example.com/');
     this.appendDummyInput()
         .appendField("execute")
-        .appendField(new Blockly.FieldTextInput(""), "statement");
+        .appendField(new Blockly.FieldTextInput("myLeds[i] = 1"), "statement");
     this.setTooltip('');
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(140);
   }
 };
