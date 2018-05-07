@@ -86,26 +86,6 @@ Blockly.Blocks["main-container"] = {
   }
 };
 
-Blockly.Blocks["ctrl-infinite-loop"] = {
-  init: function() {
-    this.setHelpUrl("http://www.example.com/");
-    this.appendStatementInput("NAME").appendField("do infinitely");
-    this.setTooltip("");
-    this.setColour(200);
-    this.setPreviousStatement(true, ["4"]);
-  }
-};
-
-Blockly.Blocks["ctrl-for-loop"] = {
-  init: function() {
-    this.setHelpUrl("http://www.example.com/");
-    this.appendStatementInput("NAME").appendField("");
-    this.setTooltip("");
-    this.setColour(200);
-    this.setPreviousStatement(true, ["4"]);
-  }
-};
-
 // /**
 //  * This is the definition for the class container block
 //  */
