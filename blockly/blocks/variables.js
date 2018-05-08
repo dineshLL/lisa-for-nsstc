@@ -118,3 +118,41 @@ Blockly.Blocks["var-name"] = {
     this.setTooltip("");
   }
 };
+
+/**
+ * definition of a single DigitalOut Variale
+ * 
+ */
+Blockly.Blocks['digitalout-var'] = {
+  init: function() {
+    this.setHelpUrl('http://www.example.com/');
+    this.setColour(330);
+    this.appendDummyInput()
+        .appendField("variable of type DigitalOut as ")
+        .appendField(new Blockly.FieldTextInput("camera_switch"), "varName")
+        .appendField("and assign pin number ")
+        .appendField(new Blockly.FieldTextInput("p24"), "pinNumber");
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setTooltip('');
+  }
+};
+
+/**
+ * definition of scoped variables
+ */
+Blockly.Blocks['scoped-var-definition'] = {
+  init: function() {
+    this.setHelpUrl('http://www.example.com/');
+    this.appendDummyInput()
+        .appendField("Define a variable of type")
+        .appendField(new Blockly.FieldDropdown([["int", "int"], ["float", "float"], ["char", "char"], ["double", "double"], ["string", "string"]]), "varType")
+        .appendField("as")
+        .appendField(new Blockly.FieldTextInput("name"), "varName")
+        .appendField("and assign");
+    this.appendValueInput("varValue");
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setTooltip('');
+  }
+};

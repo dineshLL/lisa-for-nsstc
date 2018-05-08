@@ -130,3 +130,38 @@ Blockly.lisa['var-name'] = function(block) {
 
   return code;
 };
+
+
+/**
+ * Generator stub for DigitalOut Single Variable
+ */
+Blockly.lisa['digitalout-var'] = function(block) {
+  var varName = block.getFieldValue('varName');
+  var pinNumber = block.getFieldValue('pinNumber');
+  // TODO: Assemble JavaScript into code variable.
+
+  //DigitalOut <varName>(<pinNumber>)
+
+  var code = '';
+  code += 'DigitalOut ';
+  code += varName;
+  code += '(' + pinNumber + ');\n';
+
+  return code;
+};
+
+Blockly.lisa['scoped-var-definition'] = function(block) {
+  var varType = block.getFieldValue('varType');
+  var varName = block.getFieldValue('varName');
+  var varValue = Blockly.lisa.valueToCode(block, 'varValue', Blockly.lisa.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  // <varType> <varName> = <varValue>; 
+  var code = '';
+  code += varType + ' ';
+  code += varName;
+  code += ' = ';
+  code += varValue;
+  code += ';\n';
+
+  return code;
+};
