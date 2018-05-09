@@ -87,6 +87,7 @@
                         <h1>Let's Do Programming for Cube Satellites</h1>
                         <p>Need to add some text here, need to add some text here, need to add some text here, need to add some
                             text here, need to add some text here, need to add some text here!</p>
+                        <img src="/images/cube.png">
                     </div>
                     <img src="images/home/slider/hill.png" class="slider-hill" alt="slider image">
                     <img src="images/home/slider/logo.png" class="slider-house" alt="slider image">
@@ -109,8 +110,8 @@
                 <div class="row">
                     <div class="action">
                         <div class="col-sm-12" id="scrollingPosition">
-                            <h1 class="title">OOP CONCEPTS</h1>
-                            <p>Be Creative</p>
+                            <h1 class="title">Lets Code For Cube Sats</h1>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -192,7 +193,7 @@
         <section id="blog-details" class="padding-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9 col-sm-7">
+                    <div class="col-md-12 col-sm-7">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <div class="single-blog blog-details two-column">
@@ -203,38 +204,31 @@
                                     <!--</div>-->
                                     <div class="post-content overflow" id="main_content">
                                         <h2 class="post-title bold">
-                                            <a id="def_title">Class</a>
+                                            <a id="def_title">Somethig about UAUE</a>
                                         </h2>
 
-                                        <p id="first_para">A class is used in object-oriented programming to describe one or more objects. It
-                                            serves as a template for creating, or instantiating, specific objects within
-                                            a program. While each object is created from a single class, one class can be
-                                            used to instantiate multiple objects.Several programming languages support classes,
-                                            including Java, C++, Objective C, and PHP 5 and later. While the syntax of a
-                                            class definition varies between programming languages, classes serve the same
-                                            purpose in each language. All classes may contain variable definitions and methods,
-                                            or subroutines that can be run by the corresponding object.
-                                            <br/>Below is an example of a basic C++ class definition:</p>
+                                        <p id="first_para"> info info info info info info info info info info info info info info info info info
+                                            info info info info info info info info info info info info info info info info
+                                            info info info info info info info info info info info info info info info info
+                                            info info info info info info info info
+                                            <br/>Below is an example of a basic Application</p>
                                         <pre><code class="cpp" id="def_code">
-    #include <strong><</strong>iostream<strong>></strong>
- 
-    using namespace std;
+    #include <strong>"</strong>mbed.h<strong>"</strong>
 
+    DigitalOut myLeds[] = { LED1, LED2 };
 
-    class Shape  {
-         public:
-             void setWidth(int w) {
-                 width = w;
-             }
-		
-            void setHeight(int h) {
-                 height = h;
+    int main() {
+        while(1) {
+            for(int i = 0; i < 2; i++) {
+                myLeds[i] = 1;
             }
-		
-     protected:
-         int width;
-         int height;
-    };
+            wait(0.2);
+            for(int i = 0; i < 2; i++) {
+                myLeds[i] = 0;
+            }
+            wait(0.2);
+        }
+    }
     <br/>
 </code></pre>
 
